@@ -1,0 +1,149 @@
+
+
+.top{
+    margin: 10px;
+}
+
+.top image{
+    width: 100%;
+}
+
+.wenhua{
+    border-top: 1px solid #000000;
+    padding-top: 10px;
+    margin: 0px 20px 20px 20px;
+    font-size: 12px;
+    color: #5c5c5c;
+    
+}
+
+.hot_dian{
+    height: 100px;
+    margin: 0px 10px 20px 10px;
+    padding: 10px 0px;
+    border-top: 1px solid #000000;
+}
+
+.left{    
+    float: left;
+    width: 48%;
+}
+
+.left image{    
+    height: 100px;
+    width: 100%;
+}
+
+.right{    
+    float: right;
+    width: 48%;
+}
+
+.right image{    
+    height: 100px;
+    width: 100%;
+}
+
+.tishi{
+    margin: 20px;
+    font-size: 12px;
+    color: #ff0000;
+}
+
+.quan{
+    margin: 10px;
+}
+
+.quan image{
+    height: 50px;
+    width: 100%;
+}
+
+.qy{
+    margin: 0px 10px 10px 10px;
+    border-top: 1px solid #000000;
+}
+
+.qy image{
+    height: 200px;
+    width: 100%;
+}
+
+.lc{
+    margin: 10px;
+}
+
+.lc image{
+    height: 240px;
+    width: 100%;
+}
+
+.a{
+    margin: 10px;
+}
+
+.b {
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    margin: 20px auto;
+    font-size: 14px;
+    border: 1px solid #5e5e5e;
+}
+
+.submit {
+    margin: 30px auto;
+    width: 120px;
+    font-size: 14px;
+    background-color: #79594a;
+}
+
+.news{
+    border-top: 1px solid #000000;
+    padding-top: 10px;    
+    margin-bottom: 10px;
+}
+
+.news_list{
+    height: 100px;
+    padding-left:100px; 
+    background: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #000000;
+}
+.news_image{
+    width: 80px;
+    height: 80px;
+}
+.news_left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.news_right{
+    padding: 10px 0;
+    height: 80px;
+    overflow: hidden;
+}
+.news_title{
+    font-size: 14px;
+    height: 20px;
+    overflow: hidden;
+}
+.news_jianjie{
+    color: #929292;
+    height: 50px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.me{
+    margin: 0px 10px 10px 10px;
+    border-top: 1px solid #000000;
+    padding-top: 10px;
+}
+
+.me image{
+    height: 150px;
+    width: 100%;
+}

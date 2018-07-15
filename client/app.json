@@ -1,0 +1,38 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/liuyan/liuyan",
+        "pages/call/call",
+        "pages/news/news"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#71daa2",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "答案奶茶",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "主页",
+                "iconPath": "images/index.jpg",
+                "selectedIconPath": "images/index2.jpg"
+            },
+            {
+                "pagePath": "pages/liuyan/liuyan",
+                "text": "留言",
+                "iconPath": "images/liuyan.jpg",
+                "selectedIconPath": "images/liuyan2.jpg"
+            },
+            {
+                "pagePath": "pages/call/call",
+                "text": "电话",
+                "iconPath": "images/call.jpg",
+                "selectedIconPath": "images/call2.jpg"
+            }
+        ]
+    }
+}

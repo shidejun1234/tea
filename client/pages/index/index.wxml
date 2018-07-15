@@ -1,0 +1,111 @@
+<view class='page'>
+    <view class='top'>
+        <image src='../../images/answertea.jpg'></image>
+    </view>
+    <view style='text-align: center;'>品牌文化</view>
+    <view class='wenhua'>
+        <text decode='emsp'>&emsp;&emsp;一杯可以占卜的茶，答案茶是有史以来，第一款可以为你寻找答案的神奇茶饮，无论任何问题，只要写下来并在心中默念5遍，茶面上就会神奇的浮现出问题的答案，你的答案就会开启！</text>
+    </view>
+    <view style='text-align: center;'>
+        <text decode='&emsp'>热销产品&emsp;门店实况</text>
+    </view>
+    <view class='hot_dian'>
+        <view class='left'>
+            <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+                <image src='../../images/hot.jpg'></image>
+            </navigator>
+        </view>
+        <view class='right'>
+            <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+                <image src='../../images/dian.jpg'></image>
+            </navigator>
+        </view>
+    </view>
+    <view style='text-align: center;'>
+        <text decode='&emsp'>加盟费用&emsp;盈利分析</text>
+    </view>
+    <view class='hot_dian'>
+        <view class='left'>
+            <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+                <image src='../../images/city.jpg'></image>
+            </navigator>
+        </view>
+        <view class='right'>
+            <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+                <image src='../../images/scale.jpg'></image>
+            </navigator>
+        </view>
+    </view>
+    <view class='tishi'>
+        <text decode='emsp'>&emsp;&emsp;温馨提示：点击上方图片对项目留言即可获得项目的详细资料！留言成功后，负责人将会在24小时之内答复您，使您对此项目获得更多了解。</text>
+    </view>
+    <view class='top'>
+        <image src='../../images/answertea.jpg'></image>
+    </view>
+    <view class='quan'>
+        <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+            <image src='../../images/quan.png'></image>
+        </navigator>
+    </view>
+    <view style='text-align: center;'>
+        <text decode='&emsp'>服务支持</text>
+    </view>
+    <view class='qy'>
+        <image src='../../images/qy.jpg'></image>
+    </view>
+    <view class='quan'>
+        <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+            <image src='../../images/zj.jpg'></image>
+        </navigator>
+    </view>
+    <view class='lc'>
+        <image src='../../images/lc.jpg'></image>
+    </view>
+    <view class='a'>
+        <form catchsubmit="formSubmit">
+            <input class='b' name='uName' type='text' placeholder="请输入您的姓名"></input>
+            <input class='b' name='phone' type='text' placeholder="请输入您的手机号码"></input>
+            <!-- <textarea name='liuyan' class='liuyan' auto-focus="true" style="height: 4em" placeholder="请输入留言内容"/> -->
+            <view class='b' bindtap='liuyan'>留言：{{liuyan}}</view>
+            <input class='b' hidden="{{isOther}}" name='otherLiuyan' type='text' placeholder="请输入内容" value='{{otherLiuyan}}' />
+            <button class='submit' formType="submit">提交申请</button>
+        </form>
+    </view>
+    <view style='text-align: center;'>
+        <text decode='&emsp'>新闻动态</text>
+    </view>
+    <view class='news'>
+        <view class='news_list' wx:for="{{newsList}}" wx:key="*this">
+            <navigator url='/pages/news/news?id={{item.id}}'>
+                <view class='news_left'>
+                    <image src='{{item.newsImage}}' class='news_image'></image>
+                </view>
+                <view class='news_right'>
+
+                    <view class='news_title'>
+                        <text>{{item.newsTitle}}</text>
+                    </view>
+                    <view class='news_jianjie'>
+                        <text decode='emsp'>&emsp;&emsp;{{item.newsJianjie}}</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view style='text-align: center;'>
+        <text decode='&emsp'>联系我们</text>
+    </view>
+    <view class='me'>
+        <image src='../../images/me.jpg'></image>
+    </view>
+    <view class='a'>
+        <form catchsubmit="formSubmit">
+            <input class='b' name='uName' type='text' placeholder="请输入您的姓名"></input>
+            <input class='b' name='phone' type='text' placeholder="请输入您的手机号码"></input>
+            <!-- <textarea name='liuyan' class='liuyan' auto-focus="true" style="height: 4em" placeholder="请输入留言内容"/> -->
+            <view class='b' bindtap='liuyan'>留言：{{liuyan}}</view>
+            <input class='b' hidden="{{isOther}}" name='otherLiuyan' type='text' placeholder="请输入内容" value='{{otherLiuyan}}' />
+            <button class='submit' formType="submit">提交申请</button>
+        </form>
+    </view>
+</view>
