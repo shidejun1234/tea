@@ -13,7 +13,6 @@ Page({
      */
     onLoad: function(options) {
         var that=this;
-        console.log(options.id);
         wx.request({
             url: 'http://localhost/tea/bbb.php', //仅为示例，并非真实的接口地址
             method: 'GET',
@@ -24,7 +23,6 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-                console.log(res.data);
                 that.setData({
                     newsUrl:res.data.newsUrl
                 });

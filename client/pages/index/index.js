@@ -23,7 +23,6 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-                console.log(res.data);
                 that.setData({
                     newsList:res.data
                 });
@@ -33,7 +32,6 @@ Page({
 
     formSubmit: function(e) {
         var that = this;
-        console.log(e);
         if (!e.detail.value.uName.trim()) {
             wx.showModal({
                 title: '提示',
@@ -61,7 +59,6 @@ Page({
         that.setData({
             otherLiuyan: e.detail.value.otherLiuyan
         });
-        console.log(that);
         var liuyan=that.data.liuyan;
         if (liuyan==""){
             liuyan=that.data.otherLiuyan;

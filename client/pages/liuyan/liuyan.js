@@ -21,7 +21,6 @@ Page({
 
     formSubmit: function (e) {
         var that = this;
-        console.log(e);
         if (!e.detail.value.uName.trim()) {
             wx.showModal({
                 title: '提示',
