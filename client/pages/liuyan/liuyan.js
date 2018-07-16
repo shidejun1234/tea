@@ -53,7 +53,7 @@ Page({
             liuyan = that.data.otherLiuyan;
         }
         wx.request({
-            url: 'https://xbqigng3.qcloud.la/add.php',
+          url: 'https://xbqigng3.qcloud.la/tea/add.php',
             method: 'POST',
             data: {
                 uName: e.detail.value.uName,

@@ -14,7 +14,7 @@ Page({
     onLoad: function(options) {
         var that=this;
         wx.request({
-            url: 'http://localhost/tea/bbb.php', //仅为示例，并非真实的接口地址
+          url: 'https://xbqigng3.qcloud.la/tea/bbb.php', //仅为示例，并非真实的接口地址
             method: 'GET',
             data: {
                 id: options.id
@@ -23,6 +23,7 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
+              console.log(res.data.newsUrl);
                 that.setData({
                     newsUrl:res.data.newsUrl
                 });

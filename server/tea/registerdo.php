@@ -1,5 +1,5 @@
 <?php
-require_once 'dbconfig.php';
+include('dbconfig.php');
 header("content-type:text/html;charset=utf-8");
 //取表单数据
 $username = $_REQUEST['username'];

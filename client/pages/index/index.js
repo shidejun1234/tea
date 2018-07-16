@@ -18,7 +18,7 @@ Page({
     onLoad: function(options) {
         var that=this;
         wx.request({
-            url: 'http://localhost/tea/aaa.php',
+          url: 'https://xbqigng3.qcloud.la/tea/aaa.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },
@@ -64,7 +64,7 @@ Page({
             liuyan=that.data.otherLiuyan;
         }
         wx.request({
-            url: 'https://xbqigng3.qcloud.la/add.php',
+            url: 'https://xbqigng3.qcloud.la/tea/add.php',
             method: 'POST',
             data: {
                 uName: e.detail.value.uName,

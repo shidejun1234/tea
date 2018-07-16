@@ -1,4 +1,5 @@
 <?php
+include('dbconfig.php');
 header ( "content-type:text/html;charset=utf-8" );
 if (! isset ( $_SESSION )) {
 	session_start ();
@@ -12,11 +13,14 @@ if (isset ( $_SESSION ['userName'] )) {
 	$passcode = preg_replace('/[ ]|[\']/', '', $_POST ['passcode']);
 	//计算摘要
 	$password2 = sha1 ( $passcode );
-
+	echo $username."<br/>";
+	echo $passcode."<br/>";
+	echo $password2."<br/>";
 	require_once 'dbconfig.php';
 	// 根据用户名和密码去查询帐号表
 	$sql = "select * from user where username= '$username' and password='$password2'";
-	$result = mysql_query ( $sql, $conn );
+	echo $sql;
+	$result = mysql_query ( $sql);
 	if ($row = mysql_fetch_array ( $result )) {
 		$_SESSION ['userName'] = $username;
 		header ( "location:index.php" );

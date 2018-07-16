@@ -45,6 +45,8 @@ $result = mysql_query($query);
 										<th>姓名</th>
 										<th>手机号码</th>
 										<th>留言</th>
+                                        <th>留言时间</th>
+                                        <th>状态</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -58,6 +60,15 @@ $result = mysql_query($query);
                             echo "<td>" . $row['uName'] . "</td>";
                             echo "<td>" . $row['phone'] . "</td>";
                             echo "<td>" . $row['liuyan'] . "</td>";
+                            echo "<td>" . $row['time'] . "</td>";
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-male"> 性别</i></span>
+                                <div align='left'>&nbsp;&nbsp;
+                                    <input type="radio" placeholder="性别" name='sex' value='男'/>男 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"
+                                        placeholder="性别" name='sex' value='女'/>女
+                                </div>
+                            </div>
+
                             echo "</tr>";
                         }
                         ?>

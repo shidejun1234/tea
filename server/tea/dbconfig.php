@@ -1,19 +1,15 @@
 <?php
-$db = array (
-		'server' => 'localhost',
-		'port' => '3306',
-		'username' => 'root',
-		'password' => 'wx70461f0b0fe0ace0',
-		'database' => 'tea'
-);
-
-
-$conn = mysql_connect($db['server'].':'.$db['port'],$db['username'],$db['password']);
-if (! $conn) {
-	echo "服务器不能连！" . mysql_error();
-} else {
-	// 声明字符集
-	mysql_set_charset('utf8', $conn);
-	// 选择数据库
-	mysql_select_db($db['database'], $conn);
-}
+    header("Content-type:text/html;charset=utf-8");
+    $dbname='tea';
+    $host='localhost';
+    $user='root';
+    $password='wx70461f0b0fe0ace0';
+    $link=@mysql_connect($host, $user, $password);
+    if (!$link) {
+        die("错误：".mysql_error($link));
+    }
+    if (!mysql_select_db($dbname, $link)) {
+        die("错误：".mysql_error($link));
+    }
+    mysql_query("set names utf8");
+?>
