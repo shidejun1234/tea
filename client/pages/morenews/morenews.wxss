@@ -1,0 +1,36 @@
+.news{   
+    margin:10px;
+}
+
+.news_list{
+    height: 100px;
+    padding-left:100px; 
+    background: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+.news_image{
+    width: 80px;
+    height: 80px;
+}
+.news_left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.news_right{
+    padding: 10px 0;
+    height: 80px;
+    overflow: hidden;
+}
+.news_title{
+    font-size: 14px;
+    height: 20px;
+    overflow: hidden;
+}
+.news_jianjie{
+    color: #929292;
+    height: 50px;
+    font-size: 12px;
+    overflow: hidden;
+}

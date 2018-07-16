@@ -8,7 +8,7 @@
         echo "别秀了！";
         exit;
     }
-    $sql="INSERT INTO `person`(`uName`, `phone`, `liuyan`, `time`) VALUES ('$uName','$phone','$liuyan','$time')";
+    $sql="INSERT INTO `person`(`uName`, `phone`, `liuyan`, `time`, `stats`) VALUES ('$uName','$phone','$liuyan','$time','0')";
     $query=mysql_query($sql);
     if ($query) {
         echo "留言成功";

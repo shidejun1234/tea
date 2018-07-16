@@ -38,51 +38,57 @@ $result = mysql_query($query);
 					<div class="panel-body">
 						<div class="table-responsive">
 							<table class="table table-striped table-bordered table-hover"
-								id="dataTables-example">
-								<thead>
-									<tr>
-										<th>ID</th>
-										<th>姓名</th>
-										<th>手机号码</th>
-										<th>留言</th>
-                                        <th>留言时间</th>
-                                        <th>状态</th>
-									</tr>
-								</thead>
-								<tbody>
-                        		<?php
-                        $line = 0;
-                        while ($row = mysql_fetch_array($result)) {
-                            $line ++;
-                            $linecolor = $line % 2 == 0 ? 'odd gradeX' : 'even gradeC';
-                            echo "<tr class='$linecolor'>";
-                            echo "<td>" . $row['id'] . "</td>";
-                            echo "<td>" . $row['uName'] . "</td>";
-                            echo "<td>" . $row['phone'] . "</td>";
-                            echo "<td>" . $row['liuyan'] . "</td>";
-                            echo "<td>" . $row['time'] . "</td>";
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-male"> 性别</i></span>
+                            id="dataTables-example">
+                            <thead>
+                               <tr>
+                                  <th>ID</th>
+                                  <th>姓名</th>
+                                  <th>手机号码</th>
+                                  <th>留言</th>
+                                  <th>留言时间</th>
+                                  <th>状态</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <?php
+                              $line = 0;
+                              while ($row = mysql_fetch_array($result)) {
+                                $line ++;
+                                $linecolor = $line % 2 == 0 ? 'odd gradeX' : 'even gradeC';
+                                echo "<tr class='$linecolor'>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['uName'] . "</td>";
+                                echo "<td>" . $row['phone'] . "</td>";
+                                echo "<td>" . $row['liuyan'] . "</td>";
+                                echo "<td>" . $row['time'] . "</td>";
+                                $stats1="";
+                                if($row['stats']=="1"){
+                                    $stats1="checked";
+                                }
+                                $stats2="";
+                                if($row['stats']=="0"){
+                                    $stats2="checked";
+                                }
+                                echo "<td><div class='form-group input-group'>
                                 <div align='left'>&nbsp;&nbsp;
-                                    <input type="radio" placeholder="性别" name='sex' value='男'/>男 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"
-                                        placeholder="性别" name='sex' value='女'/>女
+                                    <input type='radio' id='stats' placeholder='状态' ".$stats1." name='".$row['id']."' value='已看'/>已看 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='radio' id='stats'
+                                    placeholder='状态' ".$stats2." name='".$row['id']."' value='未看'/>未看
                                 </div>
-                            </div>
-
+                            </div></td>";
                             echo "</tr>";
                         }
                         ?>
-								</tbody>
-							</table>
-						</div>
+                    </tbody>
+                </table>
+            </div>
 
-					</div>
-				</div>
-				<!--End Advanced Tables -->
-			</div>
-		</div>
+        </div>
+    </div>
+    <!--End Advanced Tables -->
+</div>
+</div>
 
-	</div>
+</div>
 
 </div>
 <!-- /. PAGE INNER  -->
@@ -100,10 +106,24 @@ $result = mysql_query($query);
 <script src="assets/js/dataTables/jquery.dataTables.js"></script>
 <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
 <script>
-		$(document).ready(function() {
-			$('#dataTables-example').dataTable();
-		});
-	</script>
+  $(document).ready(function() {
+   $('#dataTables-example').dataTable();
+});
+  $('input[type=radio]').change(function(event) {
+      $.ajax({
+       type: "POST",
+       url: "stats.php",
+       data: {
+        id:this.name,
+        stats:this.value
+
+    },
+    success: function(data){
+        alert(data);
+    }
+});
+  });
+</script>
 <!-- CUSTOM SCRIPTS -->
 <script src="assets/js/custom.js"></script>
 </body>

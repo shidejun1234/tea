@@ -1,0 +1,18 @@
+<view class='news'>
+    <view class='news_list' wx:for="{{newsList}}" wx:key="*this">
+        <navigator url='/pages/news/news?id={{item.id}}'>
+            <view class='news_left'>
+                <image src='{{item.newsImage}}' class='news_image'></image>
+            </view>
+            <view class='news_right'>
+
+                <view class='news_title'>
+                    <text>{{item.newsTitle}}</text>
+                </view>
+                <view class='news_jianjie'>
+                    <text decode='emsp'>&emsp;&emsp;{{item.newsJianjie}}</text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

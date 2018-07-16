@@ -23,8 +23,19 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
+                var len = res.data.length;
+                var newsList=new Array();
+                if(len>5){
+                    for (var i = 1; i < 6; i++) {
+                        newsList.push(res.data[len - i]);
+                    }
+                }else{
+                    for (var i = 1; i < len+1; i++) {
+                        newsList.push(res.data[len - i]);
+                    }
+                }     
                 that.setData({
-                    newsList:res.data
+                    newsList:newsList
                 });
             }
         })

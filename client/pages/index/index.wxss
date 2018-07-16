@@ -101,7 +101,7 @@
 .news{
     border-top: 1px solid #000000;
     padding-top: 10px;    
-    margin-bottom: 10px;
+    margin: 0px 10px 10px 10px;
 }
 
 .news_list{
@@ -109,7 +109,7 @@
     padding-left:100px; 
     background: #ffffff;
     position: relative;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #e5e5e5;
 }
 .news_image{
     width: 80px;
@@ -135,6 +135,13 @@
     height: 50px;
     font-size: 12px;
     overflow: hidden;
+}
+
+.morenews{
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #5e5e5e;
 }
 
 .me{

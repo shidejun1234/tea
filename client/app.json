@@ -3,7 +3,8 @@
         "pages/index/index",
         "pages/liuyan/liuyan",
         "pages/call/call",
-        "pages/news/news"
+        "pages/news/news",
+        "pages/morenews/morenews"
     ],
     "window": {
         "navigationBarBackgroundColor": "#71daa2",

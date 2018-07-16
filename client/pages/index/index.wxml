@@ -92,6 +92,11 @@
             </navigator>
         </view>
     </view>
+    <view class='morenews'>
+        <navigator url="/pages/morenews/morenews" hover-class="other-navigator-hover">
+            <text>更多</text>
+        </navigator>
+    </view>
     <view style='text-align: center;'>
         <text decode='&emsp'>联系我们</text>
     </view>
