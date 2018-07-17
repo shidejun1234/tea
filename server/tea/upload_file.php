@@ -9,7 +9,7 @@ if (! isset ( $_SESSION ['userName'] )) {
 } else {
   $newsTitle=$_POST['newstitle'];
   $newsJianjie=$_POST['newsjianjie'];
-  $newsUrl=$_POST['newsurl'];
+  $newsContent=$_POST['newscontent'];
   if ((($_FILES["file"]["type"] == "image/gif")
     || ($_FILES["file"]["type"] == "image/jpeg")
     || ($_FILES["file"]["type"] == "image/pjpeg")
@@ -20,17 +20,11 @@ if (! isset ( $_SESSION ['userName'] )) {
     }
     else
     {
-      if (file_exists("upload/" . iconv("UTF-8", "gbk",$_FILES["file"]["name"])))
-      {
-        echo $_FILES["file"]["name"] . " 已经存在，请换一张图片或者改一下图片名称 ";
-      }
-      else
-      {
         move_uploaded_file($_FILES["file"]["tmp_name"],
           "upload/" . iconv("UTF-8", "gbk",$_FILES["file"]["name"]));
         $protocol = empty($_SERVER['HTTP_X_CLIENT_PROTO']) ? 'http:' : $_SERVER['HTTP_X_CLIENT_PROTO'] . ':';
         $newsImage=$protocol."//".$_SERVER['SERVER_NAME']."/tea/upload/" . $_FILES["file"]["name"];
-        $sql = "INSERT INTO news(id, newsTitle, newsJianjie, newsUrl, newsImage) VALUES (null,'$newsTitle','$newsJianjie','$newsUrl','$newsImage')";
+        $sql = "INSERT INTO news(id, newsTitle, newsJianjie, newsContent, newsImage) VALUES (null,'$newsTitle','$newsJianjie','$newsContent','$newsImage')";
         if (mysql_query ( $sql )) {
           echo "添加成功！！！<br/>";
           echo "<a href='news.php'>返回</a>";
@@ -38,7 +32,7 @@ if (! isset ( $_SESSION ['userName'] )) {
           echo "添加失败！！！<br/>";
           echo "<a href='news.php'>返回</a>";
         }
-      }
+
     }
   }else{
     echo "请选择图片";

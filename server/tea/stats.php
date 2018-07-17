@@ -1,6 +1,12 @@
 <?php
 require_once 'dbconfig.php';
 header("content-type:text/html;charset=utf-8");
+if (! isset ( $_SESSION )) {
+    session_start ();
+}
+if (! isset ( $_SESSION ['userName'] )) {
+    header ( "location:login.php" );
+}
 //取表单数据
 $id = $_POST['id'];
 $stats = $_POST['stats'];

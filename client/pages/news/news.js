@@ -23,9 +23,9 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-              console.log(res.data.newsUrl);
+              console.log(res.data.newsContent);
                 that.setData({
-                    newsUrl:res.data.newsUrl
+                    newsContent:res.data.newsContent
                 });
             }
         })

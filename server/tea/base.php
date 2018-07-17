@@ -55,12 +55,13 @@ $menuName = substr ( $url, $start + 1, $end - $start - 1 );
 		<ul class="nav" id="main-menu">
 			<li class="text-center"><img src="assets/img/find_user.png"
 				class="user-image img-responsive" /></li>
-				<li><a <?="index"==$menuName?"class='active-menu'":""?>
-					href="index.php"><i class="glyphicon glyphicon-user fa-3x"></i> 客户信息</a></li>
-					<li><a <?="news"==$menuName?"class='active-menu'":""?>
-						href="news.php"><i class="glyphicon glyphicon-credit-card fa-3x"></i> 添加新闻</a></li>
-						<li><a <?="shownews"==$menuName?"class='active-menu'":""?>
-							href="shownews.php"><i class="glyphicon glyphicon-list-alt fa-3x"></i> 文章信息</a></li>
+
+				<li><a <?="news"==$menuName?"class='active-menu'":""?>
+					href="news.php"><i class="glyphicon glyphicon-credit-card fa-3x"></i> 添加新闻</a></li>
+					<li><a <?="shownews"==$menuName?"class='active-menu'":""?>
+						href="shownews.php"><i class="glyphicon glyphicon-list-alt fa-3x"></i> 文章信息</a></li>
+						<li><a <?="index"==$menuName?"class='active-menu'":""?>
+							href="index.php"><i class="glyphicon glyphicon-user fa-3x"></i> 客户留言</a></li>
 						</ul>
 					</div>
 				</nav>

@@ -87,9 +87,10 @@ Page({
                 "content-type": "application/x-www-form-urlencoded"
             },
             success: function(res) {
+                console.log(res);
                 wx.showModal({
                     title: '提示',
-                    content: '留言成功',
+                    content: res.data,
                     showCancel: false
                 });
             }

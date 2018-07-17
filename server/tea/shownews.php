@@ -44,7 +44,6 @@ $result = mysql_query($query);
                                         <th>ID</th>
                                         <th>标题</th>
                                         <th>内容简介</th>
-                                        <th>文章链接</th>
                                         <th>文章图片</th>
                                     </tr>
                                 </thead>
@@ -58,7 +57,6 @@ $result = mysql_query($query);
                             echo "<td>" . $row['id'] . "</td>";
                             echo "<td>" . $row['newsTitle'] . "</td>";
                             echo "<td>" . $row['newsJianjie'] . "</td>";
-                            echo "<td>" . $row['newsUrl'] . "</td>";
                             echo "<td>" . $row['newsImage'] . "</td>";
                             echo "</tr>";
                         }
