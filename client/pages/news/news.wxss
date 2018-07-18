@@ -1,1 +1,5 @@
 /* pages/news/news.wxss */
+.news{
+    padding: 5px;
+    background-color: #fff;
+}

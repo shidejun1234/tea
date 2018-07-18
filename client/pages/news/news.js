@@ -1,3 +1,4 @@
+var WxParse = require('../../wxParse/wxParse.js');
 // pages/news/news.js
 Page({
 
@@ -23,10 +24,12 @@ Page({
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-              console.log(res.data.newsContent);
+              console.log(res.data);
                 that.setData({
                     newsContent:res.data.newsContent
                 });
+                var article = res.data;
+                WxParse.wxParse('article', 'html', res.data.newsContent, that, 5);
             }
         })
     },
