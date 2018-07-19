@@ -1,6 +1,6 @@
 <view class='page'>
     <view class='top'>
-        <image src='../../images/answertea.jpg'></image>
+        <image src='{{imagesData.imageTop}}'></image>
     </view>
     <view style='text-align: center;'>品牌文化</view>
     <view class='wenhua'>
@@ -12,12 +12,12 @@
     <view class='hot_dian'>
         <view class='left'>
             <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
-                <image src='../../images/hot.jpg'></image>
+                <image src='{{imagesData.imageHot}}'></image>
             </navigator>
         </view>
         <view class='right'>
             <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
-                <image src='../../images/dian.jpg'></image>
+                <image src='{{imagesData.imageDian}}'></image>
             </navigator>
         </view>
     </view>
@@ -40,11 +40,12 @@
         <text decode='emsp'>&emsp;&emsp;温馨提示：点击上方图片对项目留言即可获得项目的详细资料！留言成功后，负责人将会在24小时之内答复您，使您对此项目获得更多了解。</text>
     </view>
     <view class='top'>
-        <image src='../../images/answertea.jpg'></image>
+        <image src='{{imagesData.imageCenter}}'></image>
     </view>
     <view class='quan'>
         <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
-            <image src='../../images/quan.png'></image>
+            <text class='quan_num'>{{imagesData.quan}}</text>
+            <image src='../../images/quan.jpg'></image>
         </navigator>
     </view>
     <view style='text-align: center;'>

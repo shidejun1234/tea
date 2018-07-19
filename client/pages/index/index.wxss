@@ -54,6 +54,13 @@
     margin: 10px;
 }
 
+.quan_num{
+    position: relative;
+    left: 15%;
+    top: 37px;
+    color: #ff0000;
+}
+
 .quan image{
     height: 50px;
     width: 100%;

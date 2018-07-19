@@ -18,11 +18,12 @@ Page({
     onLoad: function(options) {
         var that=this;
         wx.request({
-          url: 'https://xbqigng3.qcloud.la/tea/aaa.php',
+            url: 'http://120.77.251.239/tea/aaa.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
+                console.log(res);
                 var len = res.data.length;
                 var newsList=new Array();
                 if(len>5){
@@ -36,6 +37,18 @@ Page({
                 }     
                 that.setData({
                     newsList:newsList
+                });
+            }
+        });
+        wx.request({
+            url: 'http://120.77.251.239/tea/imagejson.php',
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+                console.log(res.data);
+                that.setData({
+                    imagesData:res.data
                 });
             }
         })
@@ -75,7 +88,7 @@ Page({
             liuyan=that.data.otherLiuyan;
         }
         wx.request({
-            url: 'https://xbqigng3.qcloud.la/tea/add.php',
+            url: 'http://120.77.251.239/tea/add.php',
             method: 'POST',
             data: {
                 uName: e.detail.value.uName,

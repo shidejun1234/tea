@@ -15,7 +15,7 @@ Page({
     onLoad: function(options) {
         var that=this;
         wx.request({
-          url: 'https://xbqigng3.qcloud.la/tea/bbb.php', //仅为示例，并非真实的接口地址
+            url: 'http://120.77.251.239/tea/bbb.php', //仅为示例，并非真实的接口地址
             method: 'GET',
             data: {
                 id: options.id

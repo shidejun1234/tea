@@ -14,11 +14,12 @@ Page({
     onLoad: function (options) {
         var that = this;
         wx.request({
-            url: 'https://xbqigng3.qcloud.la/tea/aaa.php',
+            url: 'http://120.77.251.239/tea/aaa.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
+                console.log(res);
                 that.setData({
                     newsList: res.data
                 });
