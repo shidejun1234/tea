@@ -41,7 +41,7 @@ Page({
             }
         });
         wx.request({
-            url: 'http://120.77.251.239/tea/imagejson.php',
+            url: 'http://e.fslujiaoxiang.cn//tea/imagejson.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },

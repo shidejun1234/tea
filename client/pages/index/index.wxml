@@ -4,7 +4,7 @@
     </view>
     <view style='text-align: center;'>品牌文化</view>
     <view class='wenhua'>
-        <text decode='emsp'>&emsp;&emsp;一杯可以占卜的茶，答案茶是有史以来，第一款可以为你寻找答案的神奇茶饮，无论任何问题，只要写下来并在心中默念5遍，茶面上就会神奇的浮现出问题的答案，你的答案就会开启！</text>
+        <text decode='emsp'>&emsp;&emsp;{{imagesData.wenhua}}</text>
     </view>
     <view style='text-align: center;'>
         <text decode='&emsp'>热销产品&emsp;门店实况</text>

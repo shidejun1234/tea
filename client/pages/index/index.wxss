@@ -9,6 +9,7 @@
 }
 
 .wenhua{
+    
     border-top: 1px solid #000000;
     padding-top: 10px;
     margin: 0px 20px 20px 20px;
@@ -16,6 +17,7 @@
     color: #5c5c5c;
     
 }
+
 
 .hot_dian{
     height: 100px;
