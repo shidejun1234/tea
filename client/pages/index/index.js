@@ -18,12 +18,11 @@ Page({
     onLoad: function(options) {
         var that=this;
         wx.request({
-            url: 'http://120.77.251.239/tea/aaa.php',
+            url: 'https://e.fslujiaoxiang.cn/tea/aaa.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-                console.log(res);
                 var len = res.data.length;
                 var newsList=new Array();
                 if(len>5){
@@ -41,14 +40,24 @@ Page({
             }
         });
         wx.request({
-            url: 'http://e.fslujiaoxiang.cn//tea/imagejson.php',
+            url: 'https://e.fslujiaoxiang.cn/tea/imagejson.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-                console.log(res.data);
                 that.setData({
                     imagesData:res.data
+                });
+            }
+        });
+        wx.request({
+            url: 'https://e.fslujiaoxiang.cn/tea/mejson.php',
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+                that.setData({
+                    meData: res.data
                 });
             }
         })
@@ -88,7 +97,7 @@ Page({
             liuyan=that.data.otherLiuyan;
         }
         wx.request({
-            url: 'http://120.77.251.239/tea/add.php',
+            url: 'https://e.fslujiaoxiang.cn/tea/add.php',
             method: 'POST',
             data: {
                 uName: e.detail.value.uName,
