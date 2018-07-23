@@ -1,4 +1,6 @@
+var WxParse = require('../../wxParse/wxParse.js');
 var nowTime = require('../../utils/nowTime.js');
+// pages/news/news.js
 Page({
 
     /**
@@ -6,11 +8,10 @@ Page({
      */
     data: {
         liuyan: "我想加盟，请联系我。",
-        otherLiuyan:"",
-        isOther:true,
-        time:nowTime.formatTime(new Date())
+        otherLiuyan: "",
+        isOther: true,
+        time: nowTime.formatTime(new Date())
     },
-    
 
     /**
      * 生命周期函数--监听页面加载
@@ -18,52 +19,26 @@ Page({
     onLoad: function(options) {
         var that=this;
         wx.request({
-            url: 'https://e.fslujiaoxiang.cn/tea/aaa.php',
-            header: {
-                'content-type': 'application/json' // 默认值
+            url: 'https://e.fslujiaoxiang.cn/tea/bbb.php', //仅为示例，并非真实的接口地址
+            method: 'GET',
+            data: {
+                id: options.id
             },
-            success: function (res) {
-                var len = res.data.length;
-                var newsList=new Array();
-                if(len>5){
-                    for (var i = 1; i < 6; i++) {
-                        newsList.push(res.data[len - i]);
-                    }
-                }else{
-                    for (var i = 1; i < len+1; i++) {
-                        newsList.push(res.data[len - i]);
-                    }
-                }     
-                that.setData({
-                    newsList:newsList
-                });
-            }
-        });
-        wx.request({
-            url: 'https://e.fslujiaoxiang.cn/tea/imagejson.php',
             header: {
                 'content-type': 'application/json' // 默认值
             },
             success: function (res) {
                 that.setData({
-                    imagesData:res.data
+                    newsData:res.data,
+                    newsContent:res.data.newsContent
                 });
-            }
-        });
-        wx.request({
-            url: 'https://e.fslujiaoxiang.cn/tea/mejson.php',
-            header: {
-                'content-type': 'application/json' // 默认值
-            },
-            success: function (res) {
-                that.setData({
-                    meData: res.data
-                });
+                var article = res.data;
+                WxParse.wxParse('article', 'html', res.data.newsContent, that, 5);
             }
         })
     },
 
-    formSubmit: function(e) {
+    formSubmit: function (e) {
         var that = this;
         if (!e.detail.value.uName.trim()) {
             wx.showModal({
@@ -92,9 +67,9 @@ Page({
         that.setData({
             otherLiuyan: e.detail.value.otherLiuyan
         });
-        var liuyan=that.data.liuyan;
-        if (liuyan==""){
-            liuyan=that.data.otherLiuyan;
+        var liuyan = that.data.liuyan;
+        if (liuyan == "") {
+            liuyan = that.data.otherLiuyan;
         }
         wx.request({
             url: 'https://e.fslujiaoxiang.cn/tea/add.php',
@@ -103,12 +78,12 @@ Page({
                 uName: e.detail.value.uName,
                 phone: e.detail.value.phone,
                 liuyan: liuyan,
-                time:that.data.time
+                time: that.data.time
             },
             header: {
                 "content-type": "application/x-www-form-urlencoded"
             },
-            success: function(res) {
+            success: function (res) {
                 console.log(res);
                 wx.showModal({
                     title: '提示',
@@ -119,11 +94,11 @@ Page({
         })
     },
 
-    liuyan: function(e) {
+    liuyan: function (e) {
         var that = this;
         wx.showActionSheet({
             itemList: ['我想加盟，请联系我。', '加盟费多少？请联系我。', '盈利分析？请联系我。', '其他'],
-            success: function(res) {
+            success: function (res) {
                 switch (res.tapIndex) {
                     case 0:
                         that.setData({
@@ -145,8 +120,8 @@ Page({
                         break;
                     case 3:
                         that.setData({
-                            liuyan:"",
-                            isOther:false
+                            liuyan: "",
+                            isOther: false
                         })
                         break;
                 }

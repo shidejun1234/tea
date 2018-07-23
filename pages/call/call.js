@@ -3,7 +3,7 @@ Page({
     },
     makePhoneCall: function () {
         wx.makePhoneCall({
-            phoneNumber: "13242657732",
+            phoneNumber: "18924035630",
             success: function () {
                 console.log("拨打成功");
             }

@@ -104,10 +104,10 @@
     <view class='me'>
         <text>{{meData.phone}}</text>
         <text>微信：{{meData.weixin}}</text>
-        <text>招商QQ：{{meData.qq}}</text>
-        <text>微博：{{meData.weibo}}</text>
+        <!-- <text>招商QQ：{{meData.qq}}</text>
+        <text>微博：{{meData.weibo}}</text> -->
         <text>公司名称：{{meData.company}}</text>
-        <text>{{meData.address}}</text>
+        <!-- <text>{{meData.address}}</text> -->
     </view>
     <view class='a'>
         <form catchsubmit="formSubmit">

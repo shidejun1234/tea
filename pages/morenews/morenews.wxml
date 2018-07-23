@@ -16,3 +16,8 @@
         </navigator>
     </view>
 </view>
+<view class='r2'>
+    <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+        <image src='../../images/liuyan0.png'></image>
+    </navigator>
+</view>

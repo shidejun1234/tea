@@ -7,9 +7,9 @@
         "pages/morenews/morenews"
     ],
     "window": {
-        "navigationBarBackgroundColor": "#71daa2",
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "答案奶茶",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTextStyle": "write",
+        "navigationBarTitleText": "搞茶",
         "backgroundColor": "#eeeeee",
         "backgroundTextStyle": "light",
         "enablePullDownRefresh": false

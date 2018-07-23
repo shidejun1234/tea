@@ -34,3 +34,14 @@
     font-size: 12px;
     overflow: hidden;
 }
+.r2{
+    position: fixed;
+    width: 100%;
+    bottom: 500rpx;
+    z-index: 99px;
+}
+.r2 image{
+    float: right;
+    width: 100rpx;
+    height: 100rpx;
+}

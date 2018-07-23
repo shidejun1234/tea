@@ -1,9 +1,15 @@
-<!--pages/news/news.wxml-->
-<import src="../../wxParse/wxParse.wxml" />
-<view class='news'>
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-</view>
-<view class='page'>
+<view>
+    <view class='newsTop'>
+        <text>{{newsData.newsTitle}}</text>
+    </view>
+    <view>
+        <text class='time'>{{newsData.newsTime}}</text>
+    </view>
+    <!--pages/news/news.wxml-->
+    <import src="../../wxParse/wxParse.wxml" />
+    <view class='news'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
     <view class='a'>
         <form catchsubmit="formSubmit">
             <input class='b' name='uName' type='text' placeholder="请输入您的姓名"></input>
@@ -13,5 +19,10 @@
             <input class='b' hidden="{{isOther}}" name='otherLiuyan' type='text' placeholder="请输入内容" value='{{otherLiuyan}}' />
             <button class='submit' formType="submit">提交申请</button>
         </form>
+    </view>
+    <view class='r2'>
+    <navigator url="/pages/liuyan/liuyan" open-type="switchTab" hover-class="other-navigator-hover">
+        <image src='../../images/liuyan0.png'></image>
+        </navigator>
     </view>
 </view>

@@ -1,14 +1,10 @@
 {
-	"client": "./client",
-	"svr": "./server",
-	"minprogramRoot": "./client",
-	"qcloudRoot": "./server",
 	"description": "项目配置文件。",
 	"packOptions": {
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
